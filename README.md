@@ -1,4 +1,4 @@
-# Financial numerical reasoning agent - ConvFinQA
+# Financial Numerical Reasoning Agent - ConvFinQA
 
 **ConvFinQA** is a conversational numerical-reasoning benchmark over earnings filings. Each record is a data table plus surrounding prose; later questions typically depend on earlier answers in a **multi-hop** chain (for example looking up two years of a metric, then asking for the change). Some values sit in footnotes rather than cells, and tables often have irregular headers, duplicate columns, and accounting sign conventions.
 
