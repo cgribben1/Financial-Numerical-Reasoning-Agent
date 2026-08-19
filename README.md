@@ -6,7 +6,7 @@
 
 <img src="figures/convfinqa_example.png" alt="Example ConvFinQA conversation" width="400" />
 
-I set out to build a tool-calling agent for ConvFinQA, and to compare it with published state-of-the-art systems and with human-expert performance. Each filing is ingested into SQLite (one table per document, with original headers mapped to SQL names). The agent answers one turn at a time with three tools: a read-only SQL `SELECT`, a restricted Python sandbox for arithmetic, and a forced structured final-answer call. Later turns see the agent’s own previous predictions, not gold labels. Gemini 2.5 Flash was the model of choice: a middle ground between accuracy and cost/latency.
+I set out to build a **tool-calling agent** for ConvFinQA, and to compare it with published **state-of-the-art** systems and with **human-expert** performance. Each filing is ingested into SQLite (one table per document, with original headers mapped to SQL names). The agent answers one turn at a time with three tools: a read-only SQL `SELECT`, a restricted Python sandbox for arithmetic, and a forced structured final-answer call. Later turns see the agent’s own previous predictions, not gold labels. **Gemini 2.5 Flash** was the model of choice: a middle ground between accuracy and cost/latency.
 
 ## Write-up
 
