@@ -18,7 +18,7 @@ On a **100-conversation** development sample, our agent (using Gemini 2.5 Flash)
 
 **Gemini 2.5 Flash** was chosen for that cost–latency–accuracy tradeoff. On this numerical-reasoning task it also performed **surprisingly well**: better than same-tier models from other providers, competitive with much costlier frontier models, and consistently stronger than the newer Gemini 3.5 Flash.
 
-Among other changes, a main gain came from encoding financial-accounting conventions in the system prompt - for example sign conventions on losses and contra items, and treating “as of” a year on a roll-forward as the ending balance rather than the opening carry-forward.
+Among other changes, a main gain came from **encoding financial-accounting conventions** in the system prompt - for example sign conventions on losses and contra items, and treating “as of” a year on a roll-forward as the ending balance rather than the opening carry-forward.
 
 ## Setup
 
