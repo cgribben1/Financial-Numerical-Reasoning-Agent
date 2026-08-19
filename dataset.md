@@ -24,7 +24,7 @@ This dataset is a cleaner version of the original dataset from the [ConFinQA rep
 
 A sample example:
 
-<img src="figures/exampleq.png" alt="Example Question" width="400"/>
+<img src="figures/convfinqa_example.png" alt="Example ConvFinQA conversation" width="400"/>
 
 ### Types of Question: 
 - **Type I: Simple conversation**: we take one muti-hop question and decompose its reasoning program into single steps – each reasoning step will then be realized into one question as one conversation turn. 
