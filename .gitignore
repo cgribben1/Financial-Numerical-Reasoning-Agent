@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv
+
+# Local eval artefacts (not part of the portfolio snapshot)
+*.db
+results/
+results_*.json
+
+# Jupyter / OS
+.ipynb_checkpoints
+.DS_Store
+.*cache
+.claude/
+
+uv.lock

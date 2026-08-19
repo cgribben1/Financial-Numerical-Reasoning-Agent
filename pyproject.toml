@@ -1,0 +1,83 @@
+[project]
+name = "convfinqa-agent"
+version = "0.1.0"
+description = "Tool-calling agent for ConvFinQA conversational financial QA"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "typer==0.12.0",
+  "click==8.1.7",
+  "python-dotenv>=1.0.0",
+  "pydantic>=2.11.4",
+  "google-genai>=1.0.0",
+  "tenacity>=9.0.0",
+  "rich>=13.7.0",
+  "ruff>=0.11.10",
+  "mypy>=1.15.0",
+  "pytest>=8.0.0",
+  "pytest-asyncio>=0.23.0",
+]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[project.scripts]
+main = "src.main:app"
+
+
+[tool.ruff]
+fix = true
+unsafe-fixes = false
+
+[tool.ruff.lint]
+select = [
+    "F",  # default Ruff rules
+    "E",  # pycodestyle Errors
+    "W",  # pycodestyle Warnings
+    "I",  # import sorting
+    "UP", # modern syntax updates
+    "B",  # flake8 common pitfalls & best practices
+    "Q",  # flake8 consistent quotes
+    "N",  # naming conventions,
+]
+
+ignore = [
+    "B008",
+    "D413",
+    "E501",
+    "W293",
+    "W291",
+    "PLR2004",
+    "D101",
+    "D400",
+
+]
+
+fixable = ["ALL"]
+
+extend-select = [
+    "PLR2004",
+    "D101",
+    "D102",
+    "D103",
+    "D201",
+    "D202",
+    "D215",
+    "T201",
+]
+
+[tool.mypy]
+disallow_any_generics = true
+disallow_untyped_defs = true
+disallow_untyped_globals = true
+ignore_missing_imports = true
+show_error_codes = true
+strict = false
+warn_return_any = true
+plugins = ['pydantic.mypy']
+packages = ["src"]
